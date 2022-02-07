@@ -6,8 +6,11 @@ import reportWebVitals from './reportWebVitals';
 import Menu from './5.components/Menu'
 import data from "./data/recipes.json"
 
+import StarRating from "./6.components/StarRating"
+
 ReactDOM.render(
   <React.StrictMode>
+    <StarRating />
     <Menu recipes={data} />
   </React.StrictMode>,
   document.getElementById('root')
