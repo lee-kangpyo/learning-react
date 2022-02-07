@@ -3,10 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Menu from './5.components/Menu'
+import data from "./data/recipes.json"
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Menu recipes={data} />
   </React.StrictMode>,
   document.getElementById('root')
 );
