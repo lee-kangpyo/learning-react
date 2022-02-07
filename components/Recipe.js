@@ -1,20 +1,13 @@
 import React from 'react'
+import IngredientsList from "./IngredientsList"
+import Instructions from "./instructions"
 
 export default function Recipe({name, ingredients, steps}){
   return (
-    <section id="baked-salmon">
+    <section id={name.toLowerCase().replace(/ /j, "-")}>
       <h1>{name}</h1>
-      <ul className="ingredients">
-        {ingredients.map((ingredient, i) =>(
-          <li key={i}>{ingredient.name}</li>
-        ))}
-      </ul>
-      <section className="instructions">
-        <h2>조리 절차</h2>
-          {steps.map((step, i) => (
-            <p key={i}>{step}</p>
-          ))}
-      </section>
+      <IngredientsList list={ingredient} />
+      <Instructions title="조리 절차" steps={steps} />
     </section>
   )
 }
