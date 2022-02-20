@@ -5,11 +5,13 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Menu from './5.components/Menu'
 import data from "./data/recipes.json"
+import App2 from './6.components/App';
 
 import StarRating from "./6.components/StarRating"
 
 ReactDOM.render(
   <React.StrictMode>
+    <App2 />
     <StarRating />
     <Menu recipes={data} />
   </React.StrictMode>,
