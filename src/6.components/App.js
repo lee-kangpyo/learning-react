@@ -3,9 +3,14 @@ import React, { useState } from "react";
 import ColorList from './colorList'
 
 function App() {
-  const [colors] = useState(colorData.colors)
+  const [colors, setColors] = useState(colorData.colors)
   return (
-    <ColorList colors={colors} />
+    <ColorList
+      colors={colors}
+      onRemoveColor={id => {
+          const newColors = colors.filter(color => color.id !== id);
+          setColors(newColors);
+      }} />
   );
 }
 
