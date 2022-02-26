@@ -8,9 +8,11 @@ import data from "./data/recipes.json"
 import App2 from './6.components/App';
 
 import StarRating from "./6.components/StarRating"
+import AddColorForm from "./6.form/AddColorForm"
 
 ReactDOM.render(
   <React.StrictMode>
+    <AddColorForm />
     <App2 />
     <StarRating />
     <Menu recipes={data} />
